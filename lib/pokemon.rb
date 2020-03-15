@@ -1,13 +1,13 @@
 class Pokemon
  attr_reader :id, :name, :type, :hp, :db
 
-  def initialize (id:, name:, type:, hp: nil, db:)
-    @id = id
+  
+  def initialize(name:, type:, id:, db:, hp: nil)
     @name = name
     @type = type
+    @id = id
     @hp = hp
     @db = db
-    @@all << self
   end
 
   def self.save(name, type, db)
